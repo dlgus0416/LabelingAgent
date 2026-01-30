@@ -589,7 +589,7 @@ st.caption("v0.2 — 정형/반정형/비정형 데이터를 입력하여 자동
 with st.sidebar:
     st.header("⚙️ 설정")
     api_key = st.text_input("OpenAI API Key",
-        value=os.environ.get("OPENAI_API_KEY", "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"),
+        value=os.environ.get("OPENAI_API_KEY", ""),
         type="password")
 
 # --- 데이터 소스 선택 ---
@@ -614,7 +614,7 @@ if use_db:
         db_user = st.text_input("User", value="spider2")
     with col_db2:
         db_port = st.text_input("Port", value="15432")
-        db_pw = st.text_input("Password", value="!Encore2026", type="password")
+        db_pw = st.text_input("Password", value="", type="password")
 
     db_config = {"host": db_host, "dbname": db_name, "user": db_user, "password": db_pw, "port": db_port}
 

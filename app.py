@@ -16,7 +16,7 @@ from concurrent.futures import ThreadPoolExecutor
 # 페이지 설정
 # ====================================
 st.set_page_config(
-    page_title="에이전트 라벨링 서비스",
+    page_title="라벨링 에이전트",
     page_icon="🏷️",
     layout="wide",
 )

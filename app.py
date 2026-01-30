@@ -588,9 +588,17 @@ st.caption("v0.2 — 정형/반정형/비정형 데이터를 입력하여 자동
 # --- 사이드바: API 키 ---
 with st.sidebar:
     st.header("⚙️ 설정")
-    api_key = st.text_input("OpenAI API Key",
-        value=os.environ.get("OPENAI_API_KEY", ""),
-        type="password")
+
+    api_key = ""
+    try:
+        api_key = st.secrets["OPENAI_API_KEY"]
+        st.success("✅ Secrets에서 OPENAI_API_KEY 로드됨")
+    except Exception:
+        api_key = st.text_input("OpenAI API Key", type="password")
+
+    if not api_key:
+        st.warning("OPENAI_API_KEY가 필요합니다.")
+
 
 # --- 데이터 소스 선택 ---
 st.header("1. 데이터 소스 선택")

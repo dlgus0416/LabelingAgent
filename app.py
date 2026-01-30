@@ -1,5 +1,5 @@
 """
-에이전트 라벨링 서비스 - Streamlit UI (v0.2)
+라벨링 에이전트(v0.2)
 실행: streamlit run app.py
 """
 

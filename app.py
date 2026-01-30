@@ -593,6 +593,7 @@ with st.sidebar:
     try:
         api_key = st.secrets["OPENAI_API_KEY"]
         st.success("✅ Secrets에서 OPENAI_API_KEY 로드됨")
+        st.caption(f"key endswith: {api_key[-4:] if api_key else 'none'}")
     except Exception:
         api_key = st.text_input("OpenAI API Key", type="password")
 

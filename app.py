@@ -582,7 +582,7 @@ def node_save(state, log):
 # Streamlit UI
 # ====================================
 
-st.title("🏷️ 에이전트 라벨링 서비스")
+st.title("🏷️ 라벨링 에이전트")
 st.caption("v0.2 — 정형/반정형/비정형 데이터를 입력하여 자동 라벨링 워크플로우를 실행합니다.")
 
 # --- 사이드바: API 키 ---
@@ -597,7 +597,7 @@ st.header("1. 데이터 소스 선택")
 
 col_check1, col_check2 = st.columns(2)
 with col_check1:
-    use_db = st.checkbox("📊 DB (정형 데이터)", value=True)
+    use_db = st.checkbox("📊 DB(정형 데이터)", value=True)
 with col_check2:
     use_files = st.checkbox("📁 파일 업로드 (PDF / Excel / JSON / TXT)")
 

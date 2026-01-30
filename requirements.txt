@@ -1,3 +1,5 @@
 streamlit
 pandas
 numpy
+streamlit
+psycopg2-binary
